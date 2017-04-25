@@ -127,6 +127,11 @@ const wrapSettingsForm = getFormSettings => SettingsForm => {
 		};
 
 		handleAutosavingRadio = ( name, value ) => () => {
+			const { fields } = this.props;
+			if ( fields[ name ] === value ) {
+				return;
+			}
+
 			this.props.trackEvent( `Set ${ name } to ${ value }` );
 			this.props.updateFields( { [ name ]: value }, () => {
 				this.submitForm();
