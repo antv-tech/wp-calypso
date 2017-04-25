@@ -18,7 +18,7 @@ function EditorRevisionsListHeader( { restoreRevision, translate } ) {
 				onClick={ restoreRevision }
 				compact={ true }
 			>
-				{ translate( 'Restore this revision' ) }
+				{ translate( 'Load revision' ) }
 			</Button>
 		</div>
 	);
